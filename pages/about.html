@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>K3ypissr NukeBar - about</title>
+  <link rel="stylesheet" href="ui.css">
+  <style>
+    h2 { margin-top: 20px; }
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    @media (max-width: 760px) { .cols { grid-template-columns: 1fr; } }
+    .kbd { margin: 0 1px; }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="../icons/icon.png" alt="">
+    <div>
+      <h1>K3ypissr NukeBar 3.0</h1>
+      <div class="sub">Modern Firefox-inspired interface with the full HackBar v2.9 payload set, rebuilt for current Firefox and Chromium browsers.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <p style="margin-top:0">This build merges the two surviving HackBar lineages into one extension. Menus, handlers and payload text come from the original add-ons; the surrounding chrome was rebuilt as a standard WebExtension because neither legacy XPI installs on current browsers.</p>
+    <div class="cols">
+      <div>
+        <h2>What is included</h2>
+        <ul class="credit-list">
+          <li>Merged SQL, WAF, UNION, LFI, XSS, encoding and tool menus (3,600+ entries)</li>
+          <li>Source-tagged payloads: <span class="badge">P</span> HackBar v2.9, <span class="badge">M</span> k3ypissr</li>
+          <li>Load URL, split URL, POST body, custom Referer and Cookie headers</li>
+          <li>Response viewer with sandboxed preview and header table</li>
+          <li>Local decoder / encoder toolkit and hash helpers</li>
+          <li>Admin Finder wordlist scanner, Reverse IP lookup, network viewer</li>
+          <li>DIOS / QUERY / XSS payload preferences and custom payloads</li>
+          <li>Firefox-inspired light and dark themes with rounded controls, soft shadows and smooth transitions</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Execution notes</h2>
+        <ul class="credit-list">
+          <li>Firefox: real header replacement through <code>webRequest</code>.</li>
+          <li>Chromium: <code>declarativeNetRequest</code> session rules for <code>Referer</code> and <code>Cookie</code>.</li>
+          <li>POST replay uses a real form submission so cookies, redirects and history behave normally.</li>
+          <li>Raw bodies that are not form-encoded fall back to an extension-side fetch and the viewer.</li>
+          <li>Some networks (proxy, DNS, certificate) are outside what an extension may observe; the network viewer shows only what the browser exposes.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0">Keyboard</h2>
+    <p><span class="kbd">F9</span> toggle panel &nbsp; <span class="kbd">Alt+A</span> load current request &nbsp; <span class="kbd">Alt+X</span> execute &nbsp; <span class="kbd">Alt+S</span> split URL &nbsp; <span class="kbd">Alt+&uarr;</span>/<span class="kbd">Alt+&darr;</span> increment / decrement</p>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0">Credits</h2>
+    <ul class="credit-list">
+      <li><strong>HackBar v2.9</strong> - original add-on by Pedro Joaquim (infiltrated.net), later maintained forks; this build uses the v2.9 payload set and options prefs.</li>
+      <li><strong>k3ypissr Mod</strong> - classic Mod payloads, toolbar layout and icon set.</li>
+      <li><strong>farfarfar</strong> - HackBar lineage and original toolbar concepts.</li>
+      <li><strong>Web Developer</strong> toolbar by Chris Pederick - inspiration for several legacy tools.</li>
+      <li>Payload strings remain the work of their original authors. See <code>CREDITS.md</code> and <code>LICENSE</code> in the source tree.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0">Legal</h2>
+    <p class="note">Released under the GNU General Public License, version 2 or later, to stay compatible with the original HackBar releases. The bundled payload text is offensive security material: use it only against systems you own or have explicit permission to test. No warranty is provided.</p>
+    <p class="note">K3ypissr NukeBar is not affiliated with the Mozilla Foundation, Google or the original authors. Firefox and Chrome are trademarks of their respective owners.</p>
+  </div>
+
+  <p class="note" id="tool-links-anchor">Version 3.0 (combined build). Source layout: <code>modern/</code> for the WebExtension, <code>legacy/</code> for the rebuilt XUL XPI, <code>tools/</code> for the generators.</p>
+
+  <script src="about.js"></script>
+</body>
+</html>

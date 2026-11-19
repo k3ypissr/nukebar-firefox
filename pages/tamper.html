@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>K3ypissr NukeBar - Tamper Data</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body>
+  <div class="logo">
+    <img src="../icons/icon.png" alt="">
+    <h1>Tamper Data</h1>
+  </div>
+  <p class="sub">
+    Load a captured request, edit its headers or body, then replay it.
+    Navigation replay installs the edited headers through the extension so
+    the target receives them on the real main-frame request.
+  </p>
+
+  <div class="card">
+    <div class="row">
+      <select id="captured" style="flex:1;min-width:280px">
+        <option value="">No captured requests yet - browse a page first</option>
+      </select>
+      <button id="refresh">Refresh list</button>
+      <button id="load">Load request</button>
+    </div>
+
+    <div class="row">
+      <input id="url" type="text" placeholder="https://target/" style="flex:1;min-width:320px" spellcheck="false">
+      <select id="method" title="Request method">
+        <option>GET</option>
+        <option>POST</option>
+        <option>PUT</option>
+        <option>PATCH</option>
+        <option>DELETE</option>
+        <option>HEAD</option>
+        <option>OPTIONS</option>
+      </select>
+    </div>
+
+    <h2>Request headers</h2>
+    <textarea id="headers" rows="8" spellcheck="false" placeholder="User-Agent: Mozilla/5.0&#10;X-Forwarded-For: 127.0.0.1&#10;Cookie: session=abc"></textarea>
+
+    <h2>Body</h2>
+    <textarea id="body" rows="5" spellcheck="false" placeholder="user=admin&amp;pass=test"></textarea>
+
+    <div class="row" style="margin-top:12px">
+      <button id="navigate" class="primary">Tamper &amp; open as navigation</button>
+      <button id="send">Send (fetch)</button>
+      <button id="openurl">Open URL unchanged</button>
+    </div>
+    <p class="note" id="hint">Fetching is subject to the target's CORS policy for some headers; navigation replay is not.</p>
+  </div>
+
+  <div class="card">
+    <h2>Response</h2>
+    <p class="note" id="status">No response yet.</p>
+    <h2>Response headers</h2>
+    <pre id="responseHeaders">-</pre>
+    <h2>Body</h2>
+    <pre id="responseBody">-</pre>
+  </div>
+
+  <script src="tamper.js"></script>
+</body>
+</html>

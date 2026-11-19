@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>K3ypissr NukeBar - Reverse IP</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body>
+  <div class="logo">
+    <img src="../icons/icon.png" alt="">
+    <div>
+      <h1>Reverse IP / Host lookup</h1>
+      <div class="sub">Uses the public hackertarget.com API (an external service). Results depend on its availability and quota.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="row">
+      <label for="target">Host or IP</label>
+      <input id="target" type="text" style="flex:1;min-width:280px" placeholder="example.com or 93.184.216.34">
+    </div>
+    <div class="row">
+      <button class="primary" data-mode="reverseiplookup">Reverse IP</button>
+      <button data-mode="hostsearch">Host search</button>
+      <button data-mode="nmap">Nmap (top ports)</button>
+      <button data-mode="httpheaders">HTTP headers</button>
+      <span id="status" class="note"></span>
+    </div>
+  </div>
+
+  <pre id="output">Enter a target and choose a lookup.</pre>
+
+  <script src="reverse-ip.js"></script>
+</body>
+</html>

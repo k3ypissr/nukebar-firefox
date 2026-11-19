@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>K3ypissr NukeBar - NoRedirect</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body>
+  <div class="logo">
+    <img src="../icons/icon.png" alt="">
+    <h1>NoRedirect</h1>
+  </div>
+  <p class="sub">
+    Chromium does not let extensions stop or read HTTP redirects from
+    <code>fetch()</code>. NukeBar records every hop with the browser's request
+    observer instead, so you can see where a page really went before opening
+    the final URL.
+  </p>
+
+  <div class="card">
+    <div class="row">
+      <button id="openStart">Open original URL</button>
+      <button id="openFinal">Open final URL</button>
+      <button id="refresh">Refresh chain</button>
+    </div>
+    <p class="note" id="summary">Loading redirect chain...</p>
+    <table>
+      <thead>
+        <tr><th>#</th><th>Status</th><th>From</th><th>To</th></tr>
+      </thead>
+      <tbody id="hops"></tbody>
+    </table>
+    <p class="note hidden" id="empty">No redirects were observed for this tab yet. Reload the target once and refresh this chain.</p>
+  </div>
+
+  <div class="card">
+    <h2>Test a URL</h2>
+    <div class="row">
+      <input id="testUrl" type="text" placeholder="https://target/" style="flex:1;min-width:300px" spellcheck="false">
+      <button id="test">Follow redirects</button>
+    </div>
+    <p class="note" id="testResult">The fetch reports the final URL and status. It follows redirects; the table above remains the recorded chain.</p>
+  </div>
+
+  <script src="redirects.js"></script>
+</body>
+</html>

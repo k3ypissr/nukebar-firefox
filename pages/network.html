@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>K3ypissr NukeBar - network viewer</title>
+  <link rel="stylesheet" href="ui.css">
+  <style>
+    #list { max-height: 52vh; overflow: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
+    tr.selected td { background: var(--accent-soft); color: var(--text); }
+    td.url { word-break: break-all; }
+    #details { margin-top: 10px; }
+    #details pre { max-height: 30vh; }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="../icons/icon.png" alt="">
+    <div>
+      <h1>Network / header viewer</h1>
+      <div class="sub">Observes the last 400 requests seen by the extension. The log is kept in memory by the background process.</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <button id="refresh" class="primary">Refresh</button>
+    <button id="clear">Clear log</button>
+    <input id="filter" type="text" placeholder="filter by URL, method or status" style="flex:1;min-width:220px">
+    <span id="count" class="note"></span>
+  </div>
+
+  <div id="list">
+    <table>
+      <thead><tr><th>#</th><th>Method</th><th>Status</th><th>Type</th><th>URL</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <div id="details">
+    <h2>Request headers</h2>
+    <pre id="reqHeaders">Select a request.</pre>
+    <h2>Response headers</h2>
+    <pre id="resHeaders"></pre>
+  </div>
+
+  <script src="network.js"></script>
+</body>
+</html>

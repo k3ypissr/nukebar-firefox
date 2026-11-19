@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>K3ypissr NukeBar - decoder / encoder</title>
+  <link rel="stylesheet" href="ui.css">
+  <style>
+    textarea { min-height: 180px; }
+    .btns { display: grid; grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: 6px; }
+    .btns button { text-align: left; }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="../icons/icon.png" alt="">
+    <div>
+      <h1>Decoder / Encoder</h1>
+      <div class="sub">URL, Base64, hex, binary, HTML entities, Unicode, ROT13 and hashes. All local.</div>
+    </div>
+  </div>
+
+  <div class="split">
+    <div>
+      <h2>Input</h2>
+      <textarea id="input" spellcheck="false" placeholder="Paste text here..."></textarea>
+      <div class="row">
+        <button id="swap" title="Move output to input">&#8593; Output to input</button>
+        <button id="clear">Clear</button>
+      </div>
+    </div>
+    <div>
+      <h2>Output</h2>
+      <textarea id="output" spellcheck="false" readonly></textarea>
+      <div class="row">
+        <button id="copy">Copy output</button>
+        <span class="note" id="hint"></span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Transform</h2>
+  <div class="btns" id="buttons">
+    <button data-op="url-encode">URL encode</button>
+    <button data-op="url-decode">URL decode</button>
+    <button data-op="b64-encode">Base64 encode</button>
+    <button data-op="b64-decode">Base64 decode</button>
+    <button data-op="hex-encode">Hex encode</button>
+    <button data-op="hex-decode">Hex decode</button>
+    <button data-op="bin-encode">Binary encode</button>
+    <button data-op="bin-decode">Binary decode</button>
+    <button data-op="html-encode">HTML entities</button>
+    <button data-op="html-decode">HTML decode</button>
+    <button data-op="uni-encode">\\u Unicode</button>
+    <button data-op="uni-decode">Unicode decode</button>
+    <button data-op="rot13">ROT13</button>
+    <button data-op="reverse">Reverse</button>
+    <button data-op="lower">lowercase</button>
+    <button data-op="upper">UPPERCASE</button>
+    <button data-op="md5">MD5</button>
+    <button data-op="sha1">SHA-1</button>
+    <button data-op="sha256">SHA-256</button>
+    <button data-op="sqlchar">SQL CHAR()</button>
+    <button data-op="zerohex">0xHEX</button>
+    <button data-op="jshex">\\xHEX</button>
+  </div>
+
+  <script src="decoder.js"></script>
+</body>
+</html>

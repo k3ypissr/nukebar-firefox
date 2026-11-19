@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>K3ypissr NukeBar - Admin Finder</title>
+  <link rel="stylesheet" href="ui.css">
+  <style>
+    #wordlist { min-height: 150px; }
+    #results { max-height: 46vh; overflow: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
+    td.url { word-break: break-all; }
+    #progress { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="../icons/icon.png" alt="">
+    <div>
+      <h1>Admin Finder</h1>
+      <div class="sub">Checks wordlist paths and reports HTTP status codes. Requests come from the extension, so host permissions have to be granted.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="row">
+      <label for="url">Target</label>
+      <input id="url" type="url" style="flex:1;min-width:260px" placeholder="https://example.com/">
+      <button id="start" class="primary">Start</button>
+      <button id="stop" disabled>Stop</button>
+    </div>
+    <div class="row">
+      <label class="note"><input type="checkbox" id="onlyInteresting" checked> show only hits / auth</label>
+      <label class="note"><input type="checkbox" id="hideSoft" checked> hide fallback pages</label>
+      <label class="note">concurrency
+        <input id="concurrency" type="number" min="1" max="24" value="10" style="width:60px">
+      </label>
+      <span id="progress" class="note"></span>
+    </div>
+    <div class="row">
+      <span id="baseline" class="note">Baseline: not measured yet.</span>
+    </div>
+  </div>
+
+  <div class="split">
+    <div class="card">
+      <div class="row">
+        <strong>Wordlist</strong>
+        <button id="reset">Reset built-in list</button>
+        <button id="clear">Clear</button>
+      </div>
+      <textarea id="wordlist" spellcheck="false"></textarea>
+      <div class="row">
+        <input type="file" id="file" accept=".txt">
+      </div>
+    </div>
+    <div class="card">
+      <div class="row">
+        <strong>Results</strong>
+        <button id="copy">Copy found URLs</button>
+      </div>
+      <div id="results">
+        <table>
+          <thead><tr><th>Status</th><th>Length</th><th>URL</th><th>Note</th><th>Time</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <p class="note">Only scan systems you are authorized to test. This tool sends ordinary HTTP GET requests.</p>
+
+  <script src="admin-finder.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>K3ypissr NukeBar - options</title>
+  <link rel="stylesheet" href="ui.css">
+  <style>
+    .pref-grid { display: grid; grid-template-columns: 90px 1fr; gap: 6px 10px; align-items: center; }
+    .pref-grid label { color: var(--dim); font-size: 12px; }
+    .pref-grid input { width: 100%; }
+    .pack { display: flex; align-items: flex-start; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .pack:last-child { border-bottom: none; }
+    .pack input { margin-top: 3px; }
+    .pack .desc { color: var(--dim); font-size: 11.5px; }
+    #saveBar { position: sticky; bottom: 0; background: var(--bg); padding: 12px 0 6px; border-top: 1px solid var(--border); margin-top: 18px; }
+    #status { margin-left: 10px; font-size: 12px; color: #316b31; }
+    .proxy-note { color: var(--dim); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="../icons/icon.png" alt="">
+    <div>
+      <h1>K3ypissr NukeBar - Options</h1>
+      <div class="sub">Settings are stored with the extension and applied to every open panel immediately.</div>
+    </div>
+  </div>
+
+  <div class="tabs" id="tabs">
+    <button data-tab="general" class="active">General</button>
+    <button data-tab="packs">Payload packs</button>
+    <button data-tab="custom">Custom payloads</button>
+    <button data-tab="prefs">DIOS / QUERY / XSS</button>
+    <button data-tab="proxy">Proxy</button>
+  </div>
+
+  <section id="tab-general">
+    <div class="card">
+      <div class="row">
+        <label for="theme">Theme</label>
+        <select id="theme">
+          <option value="grey">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="fontSize">Editor font size</label>
+        <input id="fontSize" type="number" min="9" max="30" step="1" style="width:80px">
+        <span class="note">pixels</span>
+      </div>
+      <div class="row">
+        <label class="note"><input type="checkbox" id="openInNewTab"> open executed requests in a new tab by default</label>
+      </div>
+      <div class="row">
+        <label class="note"><input type="checkbox" id="panelOpen"> keep the panel open after a page reload</label>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0">Keyboard shortcuts (while the panel is open)</h2>
+      <table>
+        <tbody>
+          <tr><td><code>F9</code></td><td>show / hide the panel</td></tr>
+          <tr><td><code>Alt+A</code></td><td>load current URL, POST data, referrer and cookies</td></tr>
+          <tr><td><code>Alt+X</code></td><td>execute the request</td></tr>
+          <tr><td><code>Alt+S</code></td><td>split the URL at &amp; and ?</td></tr>
+          <tr><td><code>Alt+&uarr;</code> / <code>Alt+&darr;</code></td><td>increment / decrement the selected number</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Firefox reserves some Alt combinations; the panel buttons always work.</p>
+    </div>
+  </section>
+
+  <section id="tab-packs" class="hidden">
+    <div class="card">
+      <div class="pack">
+        <input type="checkbox" id="packPro">
+        <div>
+          <strong>HackBar v2.9 pack (Pro)</strong>
+          <div class="desc" id="countPro">3,440 menu items</div>
+        </div>
+      </div>
+      <div class="pack">
+        <input type="checkbox" id="packMod">
+        <div>
+          <strong>k3ypissr pack (Mod)</strong>
+          <div class="desc" id="countMod">420 menu items</div>
+        </div>
+      </div>
+      <p class="note">Both packs are loaded from one merged menu tree. Items keep their original source; identical payloads are merged and same-name entries are disambiguated, so a menu never shows two identical rows. Unticking a pack only hides its items in the menus; it does not delete anything.</p>
+      <table id="packStats">
+        <thead><tr><th>Source</th><th>Menus</th><th>Items</th><th>With handler</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="tab-custom" class="hidden">
+    <div class="card">
+      <p class="note" style="margin-top:0">One entry per line, in the form <code>Label | text</code>. The text is inserted at the caret in the focused field. A line without a <code>|</code> uses the whole line as both label and text. Lines starting with <code>#</code> are ignored.</p>
+      <textarea id="custom" rows="12" spellcheck="false" placeholder="My UNION probe | ' UNION SELECT 1,2,3-- -"></textarea>
+      <div class="row" style="margin-top:8px">
+        <button id="customExample">Insert an example</button>
+        <span class="note" id="customCount"></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="tab-prefs" class="hidden">
+    <div class="card">
+      <h2 style="margin-top:0">DIOS payloads</h2>
+      <p class="note">Used by the SQL menu's DIOS entries. These values are placeholders until you paste your own statements.</p>
+      <div class="pref-grid" id="grid-dios"></div>
+    </div>
+    <div class="card">
+      <h2 style="margin-top:0">QUERY payloads</h2>
+      <div class="pref-grid" id="grid-query"></div>
+    </div>
+    <div class="card">
+      <h2 style="margin-top:0">XSS payloads</h2>
+      <div class="pref-grid" id="grid-xss"></div>
+    </div>
+  </section>
+
+  <section id="tab-proxy" class="hidden">
+    <div class="card">
+      <p class="note" style="margin-top:0">Applies a single HTTP proxy through the Chromium <code>proxy</code> API. Firefox ignores this panel and uses its own connection settings.</p>
+      <div class="row">
+        <label class="note"><input type="checkbox" id="proxyEnabled"> enable proxy</label>
+      </div>
+      <div class="row">
+        <label for="proxyScheme">Scheme</label>
+        <select id="proxyScheme">
+          <option value="http">HTTP</option>
+          <option value="https">HTTPS</option>
+          <option value="socks4">SOCKS4</option>
+          <option value="socks5">SOCKS5</option>
+        </select>
+        <label for="proxyHost">Host</label>
+        <input id="proxyHost" type="text" placeholder="127.0.0.1" style="width:180px">
+        <label for="proxyPort">Port</label>
+        <input id="proxyPort" type="number" min="1" max="65535" value="8080" style="width:90px">
+      </div>
+      <div class="row">
+        <label for="proxyBypass">Bypass list</label>
+        <input id="proxyBypass" type="text" placeholder="&lt;local&gt;, localhost, 127.0.0.1" style="flex:1;min-width:240px">
+      </div>
+      <div class="row">
+        <button id="proxyApply" class="primary">Apply proxy</button>
+        <span class="note" id="proxyStatus"></span>
+      </div>
+      <p class="proxy-note" id="proxyUnavailable" style="display:none"></p>
+    </div>
+  </section>
+
+  <div id="saveBar">
+    <button id="save" class="primary">Save settings</button>
+    <button id="reset">Reset to defaults</button>
+    <span id="status"></span>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

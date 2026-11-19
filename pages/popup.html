@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>K3ypissr NukeBar</title>
+  <link rel="stylesheet" href="ui.css">
+  <style>
+    body { width: 316px; padding: 12px 14px 14px; }
+    .logo img { width: 26px; height: 26px; }
+    h1 { font-size: 15px; }
+    .sub { margin-bottom: 10px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .grid button, .tools button { width: 100%; text-align: left; }
+    .tools { display: flex; flex-direction: column; gap: 5px; margin-top: 6px; }
+    h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--dim); margin: 16px 0 6px; }
+    #note { margin-top: 10px; min-height: 16px; color: var(--dim); font-size: 11.5px; }
+    .hint { color: var(--dim); font-size: 11px; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="../icons/icon.png" alt="">
+    <div>
+      <h1>K3ypissr NukeBar</h1>
+      <div class="sub">Mod Combined 3.0</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <button id="toggle" class="primary">Show / hide panel</button>
+    <button id="load">Load current URL</button>
+    <button id="execute">Execute request</button>
+    <button id="split">Split URL</button>
+  </div>
+
+  <h2>Tools</h2>
+  <div class="tools">
+    <button data-page="decoder">Decoder / Encoder</button>
+    <button data-page="admin-finder">Admin Finder</button>
+    <button data-page="reverse-ip">Reverse IP</button>
+    <button data-page="network">Network viewer</button>
+    <button data-page="viewer">Response viewer</button>
+    <button data-page="options">Options</button>
+    <button data-page="about">About / credits</button>
+  </div>
+
+  <div id="note"></div>
+  <p class="hint">F9 toggles the panel once it has been opened on a page. Some browser-internal pages do not allow content scripts.</p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
