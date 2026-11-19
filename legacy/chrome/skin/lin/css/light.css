@@ -1,0 +1,130 @@
+/* HackBar Mod Combined - classic k3ypissr flat white skin.
+ * Flat white chrome, square bevels, Tahoma 11px. No gradients, no rounding.
+ *
+ * This block MUST be appended after the v2.9 rules (tools/build-legacy.mjs does
+ * that). Referencing it with "@import url(...)" at the end of hackbar.css does
+ * nothing: CSS requires @import before all rules, so browsers ignored it and
+ * the v2.9 green frame / #99b3ff field borders stayed visible.
+ */
+
+#hackBarToolbar {
+  background: #ffffff !important;
+  border: 0 !important;
+  border-top: 1px solid #ffffff !important;
+  border-bottom: 1px solid #c8c8c8 !important;
+  color: #000000 !important;
+  font-family: Tahoma, "MS Sans Serif", Verdana, sans-serif !important;
+  font-size: 11px !important;
+  -moz-appearance: none !important;
+}
+
+#hackBarToolbar .toolbarbutton-text,
+#hackBarToolbar .hackbar-toolbarbutton-iconic,
+#hackBarToolbar .toolbarbutton-1,
+#hackBarToolbar toolbarbutton {
+  -moz-appearance: none !important;
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #000000 !important;
+  text-shadow: none !important;
+  font-family: Tahoma, "MS Sans Serif", Verdana, sans-serif !important;
+  font-size: 11px !important;
+}
+
+#hackBarToolbar toolbarbutton:hover,
+#hackBarToolbar .hackbar-toolbarbutton-iconic:hover {
+  background: #f2f2f2 !important;
+  border: 1px solid !important;
+  border-color: #ffffff #b0b0b0 #b0b0b0 #ffffff !important;
+  border-radius: 0 !important;
+}
+
+#hackBarToolbar toolbarbutton:hover:active,
+#hackBarToolbar toolbarbutton[open="true"] {
+  background: #e6e6e6 !important;
+  border-color: #a8a8a8 #ffffff #ffffff #a8a8a8 !important;
+}
+
+/* v2.9 paints this one black with a red/green colour animation. */
+#hackBarToolbar toolbarbutton.modefied {
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  color: #000000 !important;
+  animation: none !important;
+  font-family: Tahoma, "MS Sans Serif", Verdana, sans-serif !important;
+}
+
+/* v2.9 gives these three 10px rounded corners. */
+#hackBarWebButton,
+#hackBarCopyButton,
+#hackBarSplitButton {
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  color: #000000 !important;
+}
+
+/* v2.9: #f2f2f2 fill and a #99b3ff outline. */
+#hackBarPlusMinusSelection {
+  background: #ffffff !important;
+  border: 1px solid !important;
+  border-color: #909090 #e2e2e2 #e2e2e2 #909090 !important;
+  border-radius: 0 !important;
+  color: #000000 !important;
+  font-family: Tahoma, "MS Sans Serif", Verdana, sans-serif !important;
+  font-size: 11px !important;
+  -moz-appearance: none !important;
+}
+
+.hackbar-menupopup-iconic {
+  background: #ffffff !important;
+  border: 1px solid #a6a6a6 !important;
+  border-radius: 0 !important;
+  padding: 2px !important;
+  opacity: 1 !important;
+}
+
+.hackbar-menuitem,
+.hackbar-menuitem-iconic,
+.hackbar-menupopup-iconic menuitem,
+.hackbar-menupopup-iconic menu {
+  color: #000000 !important;
+  font-family: Tahoma, "MS Sans Serif", Verdana, sans-serif !important;
+  font-size: 11px !important;
+}
+
+.hackbar-menuitem-iconic[_moz-menuactive="true"],
+.hackbar-menuitem[_moz-menuactive="true"],
+.hackbar-menupopup-iconic menuitem[_moz-menuactive="true"],
+.hackbar-menupopup-iconic menu[_moz-menuactive="true"] {
+  background: #000080 !important;
+  color: #ffffff !important;
+}
+
+/* v2.9: 15px Arial with a #99b3ff outline and 10px margins. */
+#hackBarTargetUrl,
+#hackBarTargetUrlPostField,
+#hackBarTargetUrlReferrerField,
+#hackBarTargetUrlCookieField,
+#rstring1,
+#rstring2,
+.replace2 {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid !important;
+  border-color: #909090 #e2e2e2 #e2e2e2 #909090 !important;
+  border-radius: 0 !important;
+  margin: 2px 0 !important;
+  font-family: "Lucida Console", Consolas, "Courier New", monospace !important;
+  font-size: 12px !important;
+  -moz-appearance: none !important;
+}
+
+#hackBarModMenus toolbarbutton {
+  color: #000000 !important;
+  font-family: Tahoma, "MS Sans Serif", Verdana, sans-serif !important;
+  font-size: 11px !important;
+  padding: 1px 4px !important;
+}
