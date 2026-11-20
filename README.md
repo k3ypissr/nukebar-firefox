@@ -1,1 +1,56 @@
-IyBLM3lwaXNzciBOdWtlQmFyIOKAlCBGaXJlZm94CgpLM3lwaXNzciBOdWtlQmFyIDMuMC4wIOKAlCB0aGUgY2xhc3NpYyBIYWNrQmFyIHJlYnVpbHQgZm9yIGN1cnJlbnQgRmlyZWZveCwgbWVyZ2luZyBIYWNrQmFyIHYyLjkgKyBNb2QgcGF5bG9hZHMgd2l0aCBoZWFkZXIgcmVwbGF5LCBkZWNvZGVyLCBBZG1pbiBGaW5kZXIsIFJldmVyc2UgSVAgYW5kIG5ldHdvcmsgdmlld2VyLgoKPiBPZmZlbnNpdmUgc2VjdXJpdHkgbWF0ZXJpYWwuIFVzZSBvbmx5IGFnYWluc3Qgc3lzdGVtcyB5b3Ugb3duIG9yIGhhdmUgZXhwbGljaXQgcGVybWlzc2lvbiB0byB0ZXN0LgoKIyMgU2NyZWVuc2hvdHMKCiFbSzN5cGlzc3IgTnVrZUJhciBwYW5lbCDigJQgRmlyZWZveF0oc2NyZWVuc2hvdHMvcGFuZWwucG5nKQoKIyMgSW5zdGFsbCDigJQgbW9kZXJuIGJ1aWxkIChGaXJlZm94IDExNSspCgoxLiBEb3dubG9hZCB0aGlzIHJlcG8gKG9yIHRoZSBgazN5cGlzc3ItbnVrZWJhci0zLjAtZmlyZWZveC54cGlgIHJlbGVhc2UgYXNzZXQpLgoyLiBPcGVuIGBhYm91dDpkZWJ1Z2dpbmcjL3J1bnRpbWUvdGhpcy1maXJlZm94YCwgY2xpY2sgKipMb2FkIFRlbXBvcmFyeSBBZGQtb24qKiwgYW5kIHBpY2sgYG1hbmlmZXN0Lmpzb25gIOKAlCBvciBpbnN0YWxsIHRoZSBzaWduZWQgYC54cGlgIGZyb20gUmVsZWFzZXMuCjMuIFByZXNzICoqRjkqKiBvbiBhbnkgcGFnZSB0byB0b2dnbGUgdGhlIHBhbmVsLgoKRmlyZWZveCB1c2VzIHJlYWwgaGVhZGVyIHJlcGxhY2VtZW50IHRocm91Z2ggYHdlYlJlcXVlc3RgIChDaHJvbWl1bSB1c2VzIGBkZWNsYXJhdGl2ZU5ldFJlcXVlc3RgIHNlc3Npb24gcnVsZXMg4oCUIHNhbWUgcGFuZWwsIGRpZmZlcmVudCBlbmdpbmUgcGF0aCkuCgojIyBXaGF0IGlzIGluY2x1ZGVkCgotIE1lcmdlZCBTUUwsIFdBRiwgVU5JT04sIExGSSwgWFNTLCBlbmNvZGluZyBhbmQgdG9vbCBtZW51cyDigJQgMyw2NTIgcGF5bG9hZCBlbnRyaWVzIGFjcm9zcyAxNzcgbWVudXMgKFBybzogMyw0NDAgaXRlbXMsIE1vZDogNDIwIGl0ZW1zLCBzb3VyY2UtdGFnZ2VkIFAgLyBNKQotIExvYWQgVVJMLCBzcGxpdCBVUkwsIFBPU1QgYm9keSwgY3VzdG9tIFJlZmVyZXIgYW5kIENvb2tpZSBoZWFkZXJzCi0gUmVzcG9uc2Ugdmlld2VyIHdpdGggc2FuZGJveGVkIHByZXZpZXcgYW5kIGhlYWRlciB0YWJsZQotIExvY2FsIGRlY29kZXIgLyBlbmNvZGVyIHRvb2xraXQgYW5kIGhhc2ggaGVscGVycwotIEFkbWluIEZpbmRlciB3b3JkbGlzdCBzY2FubmVyLCBSZXZlcnNlIElQIGxvb2t1cCwgbmV0d29yayB2aWV3ZXIKLSBESU9TIC8gUVVFUlkgLyBYU1MgcGF5bG9hZCBwcmVmZXJlbmNlcyBhbmQgY3VzdG9tIHBheWxvYWRzCi0gTGlnaHQgYW5kIGRhcmsgdGhlbWVzCgpLZXlib2FyZDogYEY5YCB0b2dnbGUgcGFuZWwgwrcgYEFsdCtBYCBsb2FkIGN1cnJlbnQgcmVxdWVzdCDCtyBgQWx0K1hgIGV4ZWN1dGUgwrcgYEFsdCtTYCBzcGxpdCBVUkwgwrcgYEFsdCvihpFgIC8gYEFsdCvihpNgIGluY3JlbWVudCAvIGRlY3JlbWVudAoKIyMgTGF5b3V0CgpgYGAKbWFuaWZlc3QuanNvbiAgICAgICAgICBNYW5pZmVzdCBWMywgZ2Vja28gaWQgaGFja2Jhci1tb2QtY29tYmluZWRAM3hwMTByZXgubG9jYWwsIEZpcmVmb3ggMTE1KwpiYWNrZ3JvdW5kLmpzICAgICAgICAgIEJhY2tncm91bmQgc2NyaXB0czogaGVhZGVyIHJlcGxheSwgUE9TVCByZXBsYXksIHZpZXdlciwgbmV0d29yayBsb2cKY29udGVudC8gICAgICAgICAgICAgICBQYW5lbCBVSSArIHBheWxvYWQgZW5naW5lcyAocHJvIC8gbW9kIC8gc2hhcmVkKSArIGdlbmVyYXRlZCBwYXlsb2FkcwpwYWdlcy8gICAgICAgICAgICAgICAgIFBvcHVwLCBvcHRpb25zLCBhYm91dCwgcG9zdGVyLCB2aWV3ZXIsIGRlY29kZXIsIEFkbWluIEZpbmRlciwgUmV2ZXJzZSBJUCwgbmV0d29yaywgdGFtcGVyLCByZWRpcmVjdHMKaWNvbnMvICAgICAgICAgICAgICAgICBJY29uIHNldApsZWdhY3kvICAgICAgICAgICAgICAgIExlZ2FjeSBYVUwgYnVpbGQg4oCUIHNlZSBiZWxvdwpDUkVESVRTLm1kICAgICAgICAgICAgIEZ1bGwgdXBzdHJlYW0gY3JlZGl0cyDigJQgbW9zdCBwYXlsb2FkIHRleHQsIG1lbnUgbGFiZWxzLCBpY29ucyBhbmQgaGFuZGxlciBsb2dpYyB3ZXJlIHdyaXR0ZW4gYnkgb3RoZXIgcGVvcGxlCkxJQ0VOU0UgICAgICAgICAgICAgICAgR1BMLTIuMC1vci1sYXRlcgpgYGAKCiMjIExlZ2FjeSBidWlsZCAoYGxlZ2FjeS9gKQoKYGxlZ2FjeS9gIGlzIHRoZSByZWJ1aWx0IFhVTCBhZGQtb24gKGBrM3lwaXNzci1udWtlYmFyLTMuMC1sZWdhY3kueHBpYCwgNC43IE1CKSBmb3IgKipGaXJlZm94IDEuNeKAkzYuMCBvbmx5KiouIEl0IGRvZXMgKipub3QqKiBpbnN0YWxsIG9uIG1vZGVybiBGaXJlZm94IOKAlCBpdCBpcyBrZXB0IGhlcmUgZm9yIGhpc3RvcnkgLyBvbGQgc2V0dXBzLgoKSXQgaW5jbHVkZXMgdGhlIGZ1bGwgUHJvIG1lbnVzIHBsdXMgdGhlIE1vZCBTUUwsIGFkbWluLCBWTSBhbmQgc3RyaW5nIG1vZHVsZXMsIHRoZSBgaG93LXRvLXVzZWAgZ3VpZGUgKGluY2x1ZGluZyBpdHMgdmlkZW8pLCBhbmQgdGhlIExpdmVIVFRQSGVhZGVycyAvIFRhbXBlciBEYXRhIC8gTm9SZWRpcmVjdCBqYXJzIHRoYXQgc2hpcHBlZCBpbiB0aGUgdjIuOSBhcmNoaXZlLgoKIyMgQ3JlZGl0cyAvIGxpY2VuY2UKCkJ1aWx0IGZyb20gSGFja0JhciBQcm8gdjIuOSAoUGguSGl0YWNoaSkgYW5kIHRoZSBrM3lwaXNzciAvIDN4cDEwcmVYIE1vZCwgb3JpZ2luYXRpbmcgd2l0aCBQZWRybyBMYWd1bmEgYW5kIEpvaGFuIEFkcmlhYW5zLiBTZWUgYENSRURJVFMubWRgIGZvciB0aGUgZnVsbCBicmVha2Rvd24uCgpSZWxlYXNlZCB1bmRlciB0aGUgR05VIEdlbmVyYWwgUHVibGljIExpY2Vuc2UsIHZlcnNpb24gMiBvciBsYXRlci4gVGhpcyBpcyBhbiB1bm9mZmljaWFsIGNvbW11bml0eSByZWJ1aWxkIOKAlCBub3QgYWZmaWxpYXRlZCB3aXRoLCBlbmRvcnNlZCBieSBvciBzdXBwb3J0ZWQgYnkgTW96aWxsYSwgR29vZ2xlLCBQZWRybyBMYWd1bmEsIFBoLkhpdGFjaGksIDN4cDEwcmVYIG9yIGFueSBvdGhlciBvcmlnaW5hbCBhdXRob3IuCgpTZWUgYWxzbzogKipLM3lwaXNzciBOdWtlQmFyIOKAlCBDaHJvbWUqKiDigJQgaHR0cHM6Ly9naXRodWIuY29tL2szeXBpc3NyL251a2ViYXItY2hyb21lIChzYW1lIDMuMC4wIGJ1aWxkIGZvciBDaHJvbWl1bSkuCg==
+# K3ypissr NukeBar — Firefox
+
+K3ypissr NukeBar 3.0.0 — the classic HackBar rebuilt for current Firefox, merging HackBar v2.9 + Mod payloads with header replay, decoder, Admin Finder, Reverse IP and network viewer.
+
+> Offensive security material. Use only against systems you own or have explicit permission to test.
+
+## Screenshots
+
+![K3ypissr NukeBar panel — Firefox](screenshots/panel.png)
+
+## Install — modern build (Firefox 115+)
+
+1. Download this repo (or the `k3ypissr-nukebar-3.0-firefox.xpi` release asset).
+2. Open `about:debugging#/runtime/this-firefox`, click **Load Temporary Add-on**, and pick `manifest.json` — or install the signed `.xpi` from Releases.
+3. Press **F9** on any page to toggle the panel.
+
+Firefox uses real header replacement through `webRequest` (Chromium uses `declarativeNetRequest` session rules — same panel, different engine path).
+
+## What is included
+
+- Merged SQL, WAF, UNION, LFI, XSS, encoding and tool menus — 3,652 payload entries across 177 menus (Pro: 3,440 items, Mod: 420 items, source-tagged P / M)
+- Load URL, split URL, POST body, custom Referer and Cookie headers
+- Response viewer with sandboxed preview and header table
+- Local decoder / encoder toolkit and hash helpers
+- Admin Finder wordlist scanner, Reverse IP lookup, network viewer
+- DIOS / QUERY / XSS payload preferences and custom payloads
+- Light and dark themes
+
+Keyboard: `F9` toggle panel · `Alt+A` load current request · `Alt+X` execute · `Alt+S` split URL · `Alt+↑` / `Alt+↓` increment / decrement
+
+## Layout
+
+```
+manifest.json          Manifest V3, gecko id hackbar-mod-combined@3xp10rex.local, Firefox 115+
+background.js          Background scripts: header replay, POST replay, viewer, network log
+content/               Panel UI + payload engines (pro / mod / shared) + generated payloads
+pages/                 Popup, options, about, poster, viewer, decoder, Admin Finder, Reverse IP, network, tamper, redirects
+icons/                 Icon set
+legacy/                Legacy XUL build — see below
+CREDITS.md             Full upstream credits — most payload text, menu labels, icons and handler logic were written by other people
+LICENSE                GPL-2.0-or-later
+```
+
+## Legacy build (`legacy/`)
+
+`legacy/` is the rebuilt XUL add-on (`k3ypissr-nukebar-3.0-legacy.xpi`, 4.7 MB) for **Firefox 1.5–6.0 only**. It does **not** install on modern Firefox — it is kept here for history / old setups.
+
+It includes the full Pro menus plus the Mod SQL, admin, VM and string modules, the `how-to-use` guide (including its video), and the LiveHTTPHeaders / Tamper Data / NoRedirect jars that shipped in the v2.9 archive.
+
+## Credits / licence
+
+Built from HackBar Pro v2.9 (Ph.Hitachi) and the k3ypissr / 3xp10reX Mod, originating with Pedro Laguna and Johan Adriaans. See `CREDITS.md` for the full breakdown.
+
+Released under the GNU General Public License, version 2 or later. This is an unofficial community rebuild — not affiliated with, endorsed by or supported by Mozilla, Google, Pedro Laguna, Ph.Hitachi, 3xp10reX or any other original author.
+
+See also: **K3ypissr NukeBar — Chrome** — https://github.com/k3ypissr/nukebar-chrome (same 3.0.0 build for Chromium).
